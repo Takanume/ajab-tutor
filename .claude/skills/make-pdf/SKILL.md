@@ -1,0 +1,1 @@
+/Users/youssef-workspace/conductor/repos/l3jeb/.claude/skills/gstack/make-pdf/SKILL.md

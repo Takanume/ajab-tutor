@@ -1,0 +1,1 @@
+/Users/youssef-workspace/conductor/repos/l3jeb/.claude/skills/gstack/connect-chrome/SKILL.md
