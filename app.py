@@ -19,6 +19,12 @@ Run :  streamlit run app.py
 from __future__ import annotations
 
 import os
+
+# IMPORTANT: doit être set AVANT l'import chromadb pour contourner le bug protobuf
+# descriptor sur Python 3.14 + opentelemetry-proto pre-generated files. Force protobuf
+# à utiliser le parser pure-Python (plus tolérant, marginalement plus lent).
+os.environ.setdefault("PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION", "python")
+
 from pathlib import Path
 
 import chromadb

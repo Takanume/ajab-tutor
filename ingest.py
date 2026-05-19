@@ -13,6 +13,11 @@ Idempotent : reset les 6 collections à chaque run.
 """
 from __future__ import annotations
 
+import os
+
+# Doit être set AVANT l'import chromadb (cf app.py pour le contexte).
+os.environ.setdefault("PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION", "python")
+
 import sys
 from pathlib import Path
 
