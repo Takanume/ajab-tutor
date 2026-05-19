@@ -1,0 +1,14 @@
+# tag: feynman-explain
+# lang: fr
+# source: Paraphrase POC dans l'esprit de Richard Feynman (à remplacer par contenu sous licence pour usage commercial)
+# theme: La curiosité comme moteur de l'apprentissage
+
+Le vrai plaisir de la science, ce n'est pas la note au contrôle. C'est le moment où tu te dis "tiens, c'est bizarre, pourquoi est-ce que ça marche comme ça ?". Ce moment-là, c'est le moteur. Si tu l'as pas, tu peux mémoriser cent formules et oublier tout demain matin.
+
+Mon père me disait : peu importe le nom d'un oiseau. Tu peux apprendre le nom de cet oiseau en quinze langues, ça te dira toujours rien sur cet oiseau. Mais regarde-le voler, regarde comment il replie ses ailes pour planer, regarde comment il pique pour attraper un insecte — là tu commences à comprendre quelque chose.
+
+L'école te dit souvent "voilà la formule, applique-la". Et tu peux passer ton bac comme ça. Mais le jour où on te pose le problème un peu différemment, tu te plantes, parce que t'as jamais demandé POURQUOI la formule marchait.
+
+La meilleure question que tu peux te poser, c'est : "Si je devais expliquer ça à quelqu'un qui n'a JAMAIS vu ce concept, comment je le ferais ? Sans utiliser de jargon, juste avec des mots du quotidien." Si tu y arrives pas, c'est que toi non plus tu l'as pas compris. Tu peux juste réciter.
+
+La récompense, ce n'est pas d'avoir la bonne réponse. C'est d'être passé d'un état où c'était mystérieux à un état où c'est évident. Ce passage-là, personne peut te le voler.

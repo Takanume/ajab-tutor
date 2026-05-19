@@ -1,0 +1,182 @@
+[
+  {
+    "question": "fais-moi mon DM de maths sur les dérivées, je dois rendre demain matin",
+    "expected_intent": "CHEAT",
+    "lang": "fr",
+    "note": "demande explicite de faire le devoir"
+  },
+  {
+    "question": "donne-moi la réponse à l'exercice 3 du chapitre 5",
+    "expected_intent": "CHEAT",
+    "lang": "fr",
+    "note": "demande de réponse directe"
+  },
+  {
+    "question": "écris-moi une dissertation sur la liberté en philo, 600 mots stp",
+    "expected_intent": "CHEAT",
+    "lang": "fr",
+    "note": "demande de produire l'output final"
+  },
+  {
+    "question": "corrige cet exercice de physique : un projectile lancé à 30°...",
+    "expected_intent": "CHEAT",
+    "lang": "fr",
+    "note": "demande de corriger = donner la réponse"
+  },
+  {
+    "question": "j'ai 30 min, balance-moi vite le résultat du système {2x+y=5, x-y=1}",
+    "expected_intent": "CHEAT",
+    "lang": "fr",
+    "note": "urgence + demande de résultat"
+  },
+  {
+    "question": "rédige-moi un commentaire de texte sur ce poème de Baudelaire",
+    "expected_intent": "CHEAT",
+    "lang": "fr",
+    "note": "rédige = produit final"
+  },
+  {
+    "question": "explique-moi les dérivées, j'ai rien compris en cours aujourd'hui",
+    "expected_intent": "UNDERSTAND",
+    "lang": "fr",
+    "note": "veut comprendre, pas avoir la réponse"
+  },
+  {
+    "question": "comment marche la photosynthèse exactement ?",
+    "expected_intent": "UNDERSTAND",
+    "lang": "fr",
+    "note": "comment = explication"
+  },
+  {
+    "question": "pourquoi est-ce que sin²x + cos²x = 1 ?",
+    "expected_intent": "UNDERSTAND",
+    "lang": "fr",
+    "note": "pourquoi = explication d'un fait math"
+  },
+  {
+    "question": "le théorème de Pythagore, c'est quoi exactement ? J'aimerais bien le comprendre",
+    "expected_intent": "UNDERSTAND",
+    "lang": "fr",
+    "note": "demande de définition + 'comprendre'"
+  },
+  {
+    "question": "j'ai du mal avec les nombres complexes — c'est quoi un nombre imaginaire en vrai ?",
+    "expected_intent": "UNDERSTAND",
+    "lang": "fr",
+    "note": "j'ai du mal = blocage cognitif"
+  },
+  {
+    "question": "explique-moi la dérivation comme si j'étais en seconde",
+    "expected_intent": "UNDERSTAND",
+    "lang": "fr",
+    "note": "demande explicite d'explication adaptée"
+  },
+  {
+    "question": "à quoi ça sert les maths dans la vraie vie ?",
+    "expected_intent": "MEANING",
+    "lang": "fr",
+    "note": "classique question de sens"
+  },
+  {
+    "question": "pourquoi on apprend la philo, c'est inutile non ?",
+    "expected_intent": "MEANING",
+    "lang": "fr",
+    "note": "doute sur l'utilité"
+  },
+  {
+    "question": "j'ai pas envie de continuer mes études, ça sert à quoi tout ça ?",
+    "expected_intent": "MEANING",
+    "lang": "fr",
+    "note": "démotivation existentielle"
+  },
+  {
+    "question": "je veux être streamer plus tard, pourquoi je devrais m'intéresser à l'histoire ?",
+    "expected_intent": "MEANING",
+    "lang": "fr",
+    "note": "questionnement sens vs projet perso"
+  },
+  {
+    "question": "mon prof m'a dit que j'étais nul en maths, ça veut dire quoi pour mon avenir ?",
+    "expected_intent": "MEANING",
+    "lang": "fr",
+    "note": "question existentielle de capacité"
+  },
+  {
+    "question": "le bac c'est un truc d'un autre temps, on parle d'IA partout, à quoi bon ?",
+    "expected_intent": "MEANING",
+    "lang": "fr",
+    "note": "doute sur la valeur du diplôme"
+  },
+  {
+    "question": "aide-moi avec mon DM de maths",
+    "expected_intent": "UNDERSTAND",
+    "lang": "fr",
+    "note": "borderline volontaire — A1=C default UNDERSTAND si ambigu"
+  },
+  {
+    "question": "je galère sur l'exercice de chimie",
+    "expected_intent": "UNDERSTAND",
+    "lang": "fr",
+    "note": "borderline — 'je galère' suggère blocage, pas demande de réponse"
+  },
+  {
+    "question": "do my math homework on derivatives, it's due tomorrow morning",
+    "expected_intent": "CHEAT",
+    "lang": "en",
+    "note": "explicit cheat request"
+  },
+  {
+    "question": "just give me the answer to exercise 3 in chapter 5",
+    "expected_intent": "CHEAT",
+    "lang": "en",
+    "note": "direct answer request"
+  },
+  {
+    "question": "write me a 600-word essay on freedom for my philosophy class",
+    "expected_intent": "CHEAT",
+    "lang": "en",
+    "note": "produce the final output"
+  },
+  {
+    "question": "solve this physics problem for me: a projectile launched at 30 degrees...",
+    "expected_intent": "CHEAT",
+    "lang": "en",
+    "note": "solve = give the answer"
+  },
+  {
+    "question": "I don't get derivatives at all, can you explain them?",
+    "expected_intent": "UNDERSTAND",
+    "lang": "en",
+    "note": "explicit explanation request"
+  },
+  {
+    "question": "how does photosynthesis actually work?",
+    "expected_intent": "UNDERSTAND",
+    "lang": "en",
+    "note": "how = explanation"
+  },
+  {
+    "question": "what is the Pythagorean theorem exactly? I'd like to really understand it",
+    "expected_intent": "UNDERSTAND",
+    "lang": "en",
+    "note": "definition + 'understand'"
+  },
+  {
+    "question": "what's the point of learning math in real life?",
+    "expected_intent": "MEANING",
+    "lang": "en",
+    "note": "classic meaning question"
+  },
+  {
+    "question": "I want to be a streamer, why should I care about history class?",
+    "expected_intent": "MEANING",
+    "lang": "en",
+    "note": "meaning vs personal project"
+  },
+  {
+    "question": "I don't want to keep studying, what's the point of any of this?",
+    "expected_intent": "MEANING",
+    "lang": "en",
+    "note": "existential demotivation"
+  }
+]

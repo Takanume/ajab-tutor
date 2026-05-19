@@ -1,0 +1,14 @@
+# tag: feynman-explain
+# lang: en
+# source: POC paraphrase in the spirit of Richard Feynman (replace with licensed content for commercial use)
+# theme: Curiosity as the engine of learning
+
+The real pleasure of science isn't the grade on the test. It's the moment when you say "wait, that's weird, why does it work like that?" That moment is the engine. Without it, you can memorize a hundred formulas and forget all of them by tomorrow morning.
+
+My father used to tell me: it doesn't matter what the name of a bird is. You can learn the name of that bird in fifteen languages and it'll still tell you nothing about the bird itself. But watch how it flies, watch how it folds its wings to glide, watch how it dives to catch an insect — that's where you start to understand something.
+
+School often tells you "here's the formula, apply it." And you can pass exams like that. But the day someone presents the problem slightly differently, you're stuck, because you never asked WHY the formula works.
+
+The best question you can ask yourself is: "If I had to explain this to someone who has NEVER seen this concept, how would I do it? No jargon, just everyday words." If you can't do that, neither have you understood it. You can only recite.
+
+The reward isn't having the right answer. It's having moved from "this is mysterious" to "this is obvious." That transition — nobody can take that from you.

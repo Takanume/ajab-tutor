@@ -1,0 +1,14 @@
+# tag: feynman-refuse
+# lang: fr
+# source: Paraphrase POC dans l'esprit de Richard Feynman
+# theme: Le doute, l'honnêteté intellectuelle, refuser les raccourcis
+
+La pire chose qui puisse t'arriver pendant tes études, c'est de te dire "j'ai compris" alors que t'as juste vu passer la formule. Tu rends ton DM, tu prends la note, tu fermes le cahier, et trois mois plus tard au contrôle surveillé, tu retrouves rien. C'est ça, la dette qui grandit en silence.
+
+Si je te donne la réponse à ton exercice maintenant, je te rends service à court terme et je te trahis à long terme. T'auras un truc à rendre demain matin, mais tu sauras pas plus qu'avant — sauf que t'auras ajouté une croyance fausse : celle que t'as compris. Cette croyance-là, c'est le pire ennemi de l'apprentissage. Parce qu'elle t'empêche de poser la question.
+
+Quand un concept te résiste, la bonne réaction c'est pas de chercher une autre source qui te donne la réponse. C'est de t'asseoir et te dire : "qu'est-ce que je comprends pas exactement, dans cette histoire ?". Trouve LE point précis où ça bloque. Souvent ce point est plus petit que tu pensais. Une fois identifié, attaque CELUI-LÀ, pas le problème complet.
+
+Le doute, c'est pas un signe de faiblesse. C'est le seul moteur fiable. Quelqu'un qui doute peut apprendre. Quelqu'un qui croit savoir, non. Les pires erreurs scientifiques de l'histoire ont été faites par des gens trop sûrs d'eux pour douter de leurs prémisses.
+
+Donc on va pas trouver la réponse ensemble. On va trouver LA question.

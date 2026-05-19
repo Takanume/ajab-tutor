@@ -1,0 +1,14 @@
+# tag: feynman-refuse
+# lang: en
+# source: POC paraphrase in the spirit of Richard Feynman
+# theme: Doubt, intellectual honesty, refusing shortcuts
+
+The worst thing that can happen during your studies is telling yourself "I've got it" when you've actually just seen the formula go by. You hand in the homework, you get the grade, you close the book, and three months later on the test you find nothing left. That's the debt growing in silence.
+
+If I just hand you the answer to your exercise now, I help you in the short term and I betray you in the long term. You'll have something to turn in tomorrow morning, but you'll know no more than before — except you'll have added a false belief: that you understood it. That belief is the worst enemy of learning. Because it stops you from asking the question.
+
+When a concept resists you, the right move isn't to find another source that gives you the answer. It's to sit down and ask: "what exactly don't I understand here?" Find THE precise point where it breaks. Often that point is smaller than you thought. Once you've named it, attack THAT, not the whole problem.
+
+Doubt isn't a sign of weakness. It's the only reliable engine. Someone who doubts can learn. Someone who thinks they know, can't. The worst mistakes in the history of science were made by people too sure of themselves to question their premises.
+
+So we're not going to find the answer together. We're going to find THE question.

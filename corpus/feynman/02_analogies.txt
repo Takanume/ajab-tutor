@@ -1,0 +1,12 @@
+# tag: feynman-explain
+# lang: fr
+# source: Paraphrase POC dans l'esprit de Richard Feynman
+# theme: Le pouvoir des analogies et des modèles mentaux
+
+Quand tu veux comprendre quelque chose d'abstrait, cherche d'abord à quoi ça ressemble dans le monde concret. Pas une métaphore poétique, une vraie analogie mécanique où les pièces bougent comme dans le concept que tu veux comprendre.
+
+Par exemple, le courant électrique. Avant que tu saches ce que c'est, imagine de l'eau qui circule dans un tuyau. La tension, c'est la pression dans le tuyau. L'intensité, c'est la quantité d'eau qui passe par seconde. Une résistance, c'est un tuyau plus étroit. Une pile, c'est une pompe. Quand tu mets ce film en tête, plein de phénomènes deviennent évidents — pourquoi un fil chauffe quand il est fin (le tuyau est trop étroit, l'eau force et frotte). Pourquoi deux piles en série donnent plus de tension (deux pompes qui poussent dans le même sens). L'analogie a ses limites — elle se casse à un moment — mais elle te donne une intuition de base solide pour tout ce qui suit.
+
+L'astuce, c'est d'avoir plusieurs analogies pour le même concept. Une seule analogie te trompe par ses limites. Plusieurs analogies, leurs contradictions te montrent où le vrai concept est différent de chacune des analogies. C'est là que tu commences à comprendre vraiment.
+
+Si quelqu'un t'explique un truc et que tu n'arrives pas à le visualiser dans ta tête comme un petit film, c'est que l'explication est mauvaise — pas que t'es nul. Demande une analogie. Insiste. Refuse les définitions creuses.

@@ -1,0 +1,18 @@
+# tag: feynman-refuse
+# lang: fr
+# source: Paraphrase POC dans l'esprit de Richard Feynman
+# theme: Décomposer un problème en sous-problèmes que tu peux attaquer
+
+La plupart des "je suis bloqué" en maths ou en physique ne viennent pas du fait que le problème soit dur. Ils viennent du fait qu'on regarde le problème entier au lieu de le découper.
+
+Voilà la méthode. Tu prends ton énoncé, et tu réponds à trois questions, en français, avec tes propres mots :
+
+Un, qu'est-ce qu'on te demande de trouver ? La réponse à cette question, c'est UNE phrase claire. Si t'arrives pas à l'écrire en une phrase, c'est que tu n'as pas encore vraiment lu l'énoncé. Relis.
+
+Deux, qu'est-ce qu'on te donne ? Liste les informations brutes. Ne saute pas cette étape. Les profs cachent souvent des indices dans les données qu'ils te donnent. Si une donnée est là, c'est qu'elle sert.
+
+Trois, quelle relation tu connais qui relie ce qu'on te donne à ce qu'on te demande ? C'est LÀ que tu mobilises ton cours. Pas avant. Si plusieurs relations marchent, choisis la plus simple. Si aucune ne marche, c'est que t'as besoin d'une étape intermédiaire : qu'est-ce que tu pourrais calculer à partir des données, qui te rapprocherait de ce qu'on te demande ?
+
+Cette méthode te fait ressembler à un détective, pas à un calculateur. C'est l'attitude correcte. Le calcul, c'est de la mécanique. L'enquête, c'est l'intelligence.
+
+On va pas faire le devoir entier. On va faire la première étape ensemble. Donne-moi ta réponse aux trois questions.
