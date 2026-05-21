@@ -53,8 +53,6 @@ def collection_name_for(mode: str, lang: str) -> str:
     return f"{base}_{lang}"
 
 
-MODE_TO_EMOJI = {"CHEAT": "🛑", "UNDERSTAND": "💡", "MEANING": "🌱"}
-
 # Multi-turn memory : nombre de tours user/assistant gardés en contexte.
 HISTORY_TURNS_KEPT = 5
 
@@ -145,11 +143,7 @@ ChatGPT gives you the answer. You'll forget it by Friday.<br>
         "sidebar_lang_label": "Language",
         "sidebar_lang_help": "Switch language. Resets the conversation.",
         "sidebar_reset_button": "🔄 New conversation",
-        "label_understand": "UNDERSTAND",
-        "label_meaning": "MEANING",
-        "label_cheat": "NO SHORTCUT",
         "spinner_thinking": "Thinking...",
-        "spinner_force_mode": "Answering in {mode} mode...",
         "input_placeholder": "Ex: explain derivatives, or what's the point of math…",
         "friendly_error": "The tutor is thinking... Try again in 5 seconds.",
         "rate_limit_error": (
@@ -204,11 +198,7 @@ ChatGPT te donne la réponse. Tu l'oublies vendredi.<br>
         "sidebar_lang_label": "Langue",
         "sidebar_lang_help": "Change la langue. Réinitialise la conversation.",
         "sidebar_reset_button": "🔄 Nouvelle conversation",
-        "label_understand": "COMPRENDRE",
-        "label_meaning": "SENS",
-        "label_cheat": "PAS DE RACCOURCI",
         "spinner_thinking": "Je réfléchis...",
-        "spinner_force_mode": "Je te réponds en mode {mode}...",
         "input_placeholder": "Ex: explique-moi les dérivées, ou à quoi servent les maths…",
         "friendly_error": "Le tuteur réfléchit... Réessaie dans 5 secondes.",
         "rate_limit_error": (
@@ -238,11 +228,6 @@ def t(key: str, lang: str, **fmt) -> str:
     """Lookup i18n. Fallback sur EN si la clé manque dans la langue demandée."""
     text = LOCALES.get(lang, LOCALES[DEFAULT_LANG]).get(key) or LOCALES[DEFAULT_LANG].get(key, key)
     return text.format(**fmt) if fmt else text
-
-
-def mode_label(mode: str, lang: str) -> str:
-    """Label localisé d'un mode."""
-    return t({"CHEAT": "label_cheat", "UNDERSTAND": "label_understand", "MEANING": "label_meaning"}[mode], lang)
 
 
 def format_error_message(exc: Exception, lang: str) -> str:
@@ -445,8 +430,6 @@ def main() -> None:
         st.session_state.lang = DEFAULT_LANG
     if "messages" not in st.session_state:
         st.session_state.messages = []
-    if "pending_rerun" not in st.session_state:
-        st.session_state.pending_rerun = None
 
     lang = st.session_state.lang
 
@@ -477,45 +460,15 @@ def main() -> None:
     # Welcome hero : affiché uniquement à l'ouverture (état vide), disparaît dès la première
     # question. Sert de "landing pitch" qui ne pollue pas la conversation longue session.
     # unsafe_allow_html=True nécessaire pour le styling inline (gradients, pills, callout panels).
-    if not st.session_state.messages and not st.session_state.pending_rerun:
+    if not st.session_state.messages:
         st.markdown(t("welcome_hero", lang), unsafe_allow_html=True)
     else:
         st.caption(t("app_caption", lang))
 
     # Render history
-    for i, msg in enumerate(st.session_state.messages):
+    for msg in st.session_state.messages:
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
-            if msg["role"] == "assistant" and msg.get("mode"):
-                if i == len(st.session_state.messages) - 1:
-                    forced = render_assistant_buttons(msg["question"], msg["mode"], i, lang)
-                    if forced:
-                        st.session_state.pending_rerun = (msg["question"], forced)
-                        st.rerun()
-
-    # Handle pending rerun (force mode)
-    if st.session_state.pending_rerun:
-        question, forced_mode = st.session_state.pending_rerun
-        st.session_state.pending_rerun = None
-        history_for_rerun = build_history(st.session_state.messages[:-2]) if len(st.session_state.messages) >= 2 else []
-        with st.chat_message("assistant"):
-            with st.spinner(t("spinner_force_mode", lang, mode=mode_label(forced_mode, lang))):
-                try:
-                    response_text, mode_used = answer(
-                        get_groq_client(),
-                        get_chroma_client(),
-                        question,
-                        lang,
-                        forced_mode=forced_mode,
-                        history=history_for_rerun,
-                    )
-                except Exception as exc:  # Q1 — classifie par type pour message ciblé
-                    response_text, mode_used = format_error_message(exc, lang), forced_mode
-            st.markdown(response_text)
-        st.session_state.messages.append(
-            {"role": "assistant", "content": response_text, "mode": mode_used, "question": question}
-        )
-        st.rerun()
 
     # Input
     user_input = st.chat_input(t("input_placeholder", lang))
