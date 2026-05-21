@@ -81,6 +81,7 @@ CUSTOM_CSS = """
 [data-testid="stChatInput"] textarea,
 .stChatInput textarea {
     font-size: 1.05em !important;
+    min-height: 56px !important;
 }
 [data-testid="stChatInput"] textarea::placeholder,
 .stChatInput textarea::placeholder {
@@ -101,33 +102,20 @@ LOCALES = {
             "Ask me your question. I'll detect what you're looking for and reply in the matching style."
         ),
         "welcome_hero": """
-<div style="padding: 24px 26px; background: linear-gradient(135deg, rgba(239, 68, 68, 0.10) 0%, rgba(249, 115, 22, 0.06) 100%); border-left: 6px solid #ef4444; border-radius: 14px; margin: 8px 0 22px 0;">
-  <h2 style="margin: 0; font-size: 1.75em; font-weight: 800; line-height: 1.25; letter-spacing: -0.01em;">
+<div style="padding: 18px 22px; background: rgba(239, 68, 68, 0.08); border-left: 5px solid #ef4444; border-radius: 12px; margin: 4px 0 14px 0;">
+  <h2 style="margin: 0; font-size: 1.45em; font-weight: 800; line-height: 1.25;">
     You don't hate learning.<br>
     You hate learning things that <span style="color: #ef4444;">make no sense</span>.
   </h2>
 </div>
 
-<p style="font-size: 1.08em; margin: 14px 0 8px 0; opacity: 0.78;">
-ChatGPT gives you the answer. <em>You'll forget it by Friday.</em>
+<p style="font-size: 1em; margin: 12px 0 18px 0; line-height: 1.5;">
+ChatGPT gives you the answer. You'll forget it by Friday.<br>
+<strong style="color: #ea580c;">I refuse to give you the answer</strong> — and that's exactly why you'll remember it.
 </p>
 
-<div style="margin: 10px 0 22px 0; padding: 14px 18px; background: rgba(249, 115, 22, 0.12); border-left: 5px solid #f97316; border-radius: 10px;">
-  <span style="font-size: 1.15em; font-weight: 700; color: #ea580c;">I refuse to give you the answer.</span>
-  <span style="font-size: 1.05em;"> And that's exactly why you'll remember it.</span>
-</div>
-
-<p style="font-size: 1.02em; margin: 16px 0; line-height: 1.55;">
-Complex subjects, broken down step by step, until they click. The kind of understanding that opens doors
-<span style="background: rgba(139, 92, 246, 0.18); padding: 3px 10px; border-radius: 8px; font-weight: 700; color: #7c3aed; white-space: nowrap;">next year</span>
-in university interviews,
-<span style="background: rgba(139, 92, 246, 0.18); padding: 3px 10px; border-radius: 8px; font-weight: 700; color: #7c3aed; white-space: nowrap;">in three years</span>
-during your first internship — not just "someday".
-</p>
-
-<div style="margin: 26px 0 14px 0; padding: 18px 22px; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; border-radius: 14px; text-align: center; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.28);">
-  <div style="font-size: 1.18em; font-weight: 700; margin-bottom: 4px;">👇 Ask your first question below.</div>
-  <div style="font-size: 0.95em; opacity: 0.93; font-weight: 400;">Even one you'd be embarrassed to ask in class.</div>
+<div style="margin: 0 0 4px 0; padding: 12px 18px; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; border-radius: 12px; text-align: center; font-weight: 600; font-size: 1.02em; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25);">
+  👇 Ask your first question below
 </div>
 """,
         "sidebar_about": "How I work",
@@ -148,7 +136,7 @@ during your first internship — not just "someday".
         "mode_forced_caption": "Mode (forced)",
         "spinner_thinking": "Thinking...",
         "spinner_force_mode": "Answering in {mode} mode...",
-        "input_placeholder": "Ask a question (concept you don't get, meaning, homework...)",
+        "input_placeholder": "Ex: explain derivatives, or what's the point of math…",
         "friendly_error": "The tutor is thinking... Try again in 5 seconds.",
         "rate_limit_error": (
             "⏳ The tutor is busy right now — too many people are asking at the same time. "
@@ -175,32 +163,20 @@ during your first internship — not just "someday".
             "Pose-moi ta question. Je détecte ce que tu cherches et je te réponds dans le style adapté."
         ),
         "welcome_hero": """
-<div style="padding: 24px 26px; background: linear-gradient(135deg, rgba(239, 68, 68, 0.10) 0%, rgba(249, 115, 22, 0.06) 100%); border-left: 6px solid #ef4444; border-radius: 14px; margin: 8px 0 22px 0;">
-  <h2 style="margin: 0; font-size: 1.75em; font-weight: 800; line-height: 1.25; letter-spacing: -0.01em;">
+<div style="padding: 18px 22px; background: rgba(239, 68, 68, 0.08); border-left: 5px solid #ef4444; border-radius: 12px; margin: 4px 0 14px 0;">
+  <h2 style="margin: 0; font-size: 1.45em; font-weight: 800; line-height: 1.25;">
     Tu détestes pas apprendre.<br>
     Tu détestes apprendre <span style="color: #ef4444;">pour rien</span>.
   </h2>
 </div>
 
-<p style="font-size: 1.08em; margin: 14px 0 8px 0; opacity: 0.78;">
-ChatGPT te donne la réponse. <em>Tu l'oublies vendredi.</em>
+<p style="font-size: 1em; margin: 12px 0 18px 0; line-height: 1.5;">
+ChatGPT te donne la réponse. Tu l'oublies vendredi.<br>
+<strong style="color: #ea580c;">Moi je refuse de te la donner</strong> — et c'est pour ça que tu vas vraiment retenir.
 </p>
 
-<div style="margin: 10px 0 22px 0; padding: 14px 18px; background: rgba(249, 115, 22, 0.12); border-left: 5px solid #f97316; border-radius: 10px;">
-  <span style="font-size: 1.15em; font-weight: 700; color: #ea580c;">Moi je refuse de te la donner.</span>
-  <span style="font-size: 1.05em;"> Et c'est pour ça que tu vas vraiment retenir.</span>
-</div>
-
-<p style="font-size: 1.02em; margin: 16px 0; line-height: 1.55;">
-On décortique le sujet ensemble, étape par étape, jusqu'au déclic. Pas pour le contrôle de demain — pour
-<span style="background: rgba(139, 92, 246, 0.18); padding: 3px 10px; border-radius: 8px; font-weight: 700; color: #7c3aed; white-space: nowrap;">l'oral du bac</span>,
-<span style="background: rgba(139, 92, 246, 0.18); padding: 3px 10px; border-radius: 8px; font-weight: 700; color: #7c3aed; white-space: nowrap;">Parcoursup</span>,
-<span style="background: rgba(139, 92, 246, 0.18); padding: 3px 10px; border-radius: 8px; font-weight: 700; color: #7c3aed; white-space: nowrap;">ton premier stage</span>.
-</p>
-
-<div style="margin: 26px 0 14px 0; padding: 18px 22px; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; border-radius: 14px; text-align: center; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.28);">
-  <div style="font-size: 1.18em; font-weight: 700; margin-bottom: 4px;">👇 Tape ta première question en bas.</div>
-  <div style="font-size: 0.95em; opacity: 0.93; font-weight: 400;">Même celle que tu n'oserais jamais poser en classe.</div>
+<div style="margin: 0 0 4px 0; padding: 12px 18px; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; border-radius: 12px; text-align: center; font-weight: 600; font-size: 1.02em; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25);">
+  👇 Tape ta question en bas
 </div>
 """,
         "sidebar_about": "Comment je marche",
@@ -221,7 +197,7 @@ On décortique le sujet ensemble, étape par étape, jusqu'au déclic. Pas pour 
         "mode_forced_caption": "Mode (forcé)",
         "spinner_thinking": "Je réfléchis...",
         "spinner_force_mode": "Je te réponds en mode {mode}...",
-        "input_placeholder": "Pose ta question (concept que tu comprends pas, sens, devoir...)",
+        "input_placeholder": "Ex: explique-moi les dérivées, ou à quoi servent les maths…",
         "friendly_error": "Le tuteur réfléchit... Réessaie dans 5 secondes.",
         "rate_limit_error": (
             "⏳ Le tuteur est très demandé en ce moment — trop de questions arrivent en même temps. "
