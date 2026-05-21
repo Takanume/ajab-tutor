@@ -70,12 +70,12 @@ LOCALES = {
         ),
         "welcome_hero": (
             "> **You don't hate learning. You hate learning things that make no sense.**\n\n"
-            "This tutor helps you understand **why** a topic matters, **where** it shows up in real life, "
-            "and **how** to actually *get it* — instead of memorizing it for one exam and forgetting "
-            "it a week later.\n\n"
-            "Complex subjects are broken down simply, step by step, until they click. "
-            "You're not just studying to pass — you're building the kind of understanding "
-            "that can open doors later in **science, tech, business, medicine**, and beyond."
+            "ChatGPT gives you the answer. You'll forget it by Friday.\n\n"
+            "I refuse to give you the answer — and that's exactly why you'll remember it.\n\n"
+            "Complex subjects, broken down step by step, until they click. "
+            "The kind of understanding that opens doors **next year** in university interviews, "
+            "**in three years** during your first internship — not just \"someday\".\n\n"
+            "**👇 Ask your first question below. Even one you'd be embarrassed to ask in class.**"
         ),
         "sidebar_about": "About",
         "sidebar_modes_intro": "I adapt my answer to what you're trying to do:",
@@ -125,13 +125,13 @@ LOCALES = {
             "Pose-moi ta question. Je détecte ce que tu cherches et je te réponds dans le style adapté."
         ),
         "welcome_hero": (
-            "> **Tu détestes pas apprendre. Tu détestes apprendre des trucs qui n'ont aucun sens.**\n\n"
-            "Ce tuteur t'aide à comprendre **pourquoi** un sujet compte, **où** il apparaît dans la vraie vie, "
-            "et **comment** vraiment le *piger* — au lieu de le bachoter pour un contrôle et tout oublier "
-            "une semaine après.\n\n"
-            "Les concepts complexes se décortiquent simplement, étape par étape, jusqu'au déclic. "
-            "Tu travailles pas juste pour passer — tu construis le genre de compréhension "
-            "qui peut t'ouvrir des portes plus tard en **sciences, tech, business, médecine**, et au-delà."
+            "> **Tu détestes pas apprendre. Tu détestes apprendre pour rien.**\n\n"
+            "ChatGPT te donne la réponse. Tu l'oublies vendredi.\n\n"
+            "Moi je refuse de te la donner — et c'est pour ça que tu vas vraiment retenir.\n\n"
+            "On décortique le sujet ensemble, étape par étape, jusqu'au déclic. "
+            "Pas pour le contrôle de demain — pour **l'oral du bac**, pour **Parcoursup**, "
+            "pour **ton premier stage**.\n\n"
+            "**👇 Tape ta première question en bas. Même celle que tu n'oserais jamais poser en classe.**"
         ),
         "sidebar_about": "À propos",
         "sidebar_modes_intro": "J'adapte ma réponse à ce que tu essaies de faire :",
