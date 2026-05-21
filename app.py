@@ -58,6 +58,38 @@ MODE_TO_EMOJI = {"CHEAT": "🛑", "UNDERSTAND": "💡", "MEANING": "🌱"}
 # Multi-turn memory : nombre de tours user/assistant gardés en contexte.
 HISTORY_TURNS_KEPT = 5
 
+# CSS injecté pour aligner le chat input sur l'identité visuelle de la hero (violet/rose).
+# Selectors multiples pour compat versions Streamlit. !important pour override les defaults.
+CUSTOM_CSS = """
+<style>
+[data-testid="stChatInput"],
+.stChatInput {
+    border: 2px solid rgba(139, 92, 246, 0.55) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 16px rgba(139, 92, 246, 0.20) !important;
+    transition: all 0.2s ease;
+}
+[data-testid="stChatInput"]:hover,
+.stChatInput:hover {
+    border-color: rgba(139, 92, 246, 0.80) !important;
+}
+[data-testid="stChatInput"]:focus-within,
+.stChatInput:focus-within {
+    border-color: rgba(236, 72, 153, 0.85) !important;
+    box-shadow: 0 6px 24px rgba(236, 72, 153, 0.30) !important;
+}
+[data-testid="stChatInput"] textarea,
+.stChatInput textarea {
+    font-size: 1.05em !important;
+}
+[data-testid="stChatInput"] textarea::placeholder,
+.stChatInput textarea::placeholder {
+    color: rgba(139, 92, 246, 0.75) !important;
+    font-weight: 500 !important;
+}
+</style>
+"""
+
 
 # === i18n ===
 
