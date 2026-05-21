@@ -148,8 +148,6 @@ ChatGPT gives you the answer. You'll forget it by Friday.<br>
         "label_understand": "UNDERSTAND",
         "label_meaning": "MEANING",
         "label_cheat": "NO SHORTCUT",
-        "mode_caption": "Mode",
-        "mode_forced_caption": "Mode (forced)",
         "spinner_thinking": "Thinking...",
         "spinner_force_mode": "Answering in {mode} mode...",
         "input_placeholder": "Ex: explain derivatives, or what's the point of math…",
@@ -209,8 +207,6 @@ ChatGPT te donne la réponse. Tu l'oublies vendredi.<br>
         "label_understand": "COMPRENDRE",
         "label_meaning": "SENS",
         "label_cheat": "PAS DE RACCOURCI",
-        "mode_caption": "Mode",
-        "mode_forced_caption": "Mode (forcé)",
         "spinner_thinking": "Je réfléchis...",
         "spinner_force_mode": "Je te réponds en mode {mode}...",
         "input_placeholder": "Ex: explique-moi les dérivées, ou à quoi servent les maths…",
@@ -491,7 +487,6 @@ def main() -> None:
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
             if msg["role"] == "assistant" and msg.get("mode"):
-                st.caption(f"{MODE_TO_EMOJI[msg['mode']]} {t('mode_caption', lang)} : {mode_label(msg['mode'], lang)}")
                 if i == len(st.session_state.messages) - 1:
                     forced = render_assistant_buttons(msg["question"], msg["mode"], i, lang)
                     if forced:
@@ -517,7 +512,6 @@ def main() -> None:
                 except Exception as exc:  # Q1 — classifie par type pour message ciblé
                     response_text, mode_used = format_error_message(exc, lang), forced_mode
             st.markdown(response_text)
-            st.caption(f"{MODE_TO_EMOJI[mode_used]} {t('mode_forced_caption', lang)} : {mode_label(mode_used, lang)}")
         st.session_state.messages.append(
             {"role": "assistant", "content": response_text, "mode": mode_used, "question": question}
         )
@@ -544,7 +538,6 @@ def main() -> None:
                     response_text = format_error_message(exc, lang)
                     mode_used = "UNDERSTAND"
             st.markdown(response_text)
-            st.caption(f"{MODE_TO_EMOJI[mode_used]} {t('mode_caption', lang)} : {mode_label(mode_used, lang)}")
         st.session_state.messages.append(
             {"role": "assistant", "content": response_text, "mode": mode_used, "question": user_input}
         )
