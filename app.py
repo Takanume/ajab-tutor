@@ -30,7 +30,7 @@ from pathlib import Path
 import chromadb
 import streamlit as st
 from dotenv import load_dotenv
-from groq import Groq
+from groq import APIConnectionError, APITimeoutError, Groq, RateLimitError
 
 import prompts
 
@@ -91,6 +91,14 @@ LOCALES = {
         "spinner_force_mode": "Answering in {mode} mode...",
         "input_placeholder": "Ask a question (concept you don't get, meaning, homework...)",
         "friendly_error": "The tutor is thinking... Try again in 5 seconds.",
+        "rate_limit_error": (
+            "⏳ The tutor is busy right now — too many people are asking at the same time. "
+            "Please wait about 30 seconds and try again. "
+            "(Free tier limit: ~30 questions/minute shared across all users of this app.)"
+        ),
+        "network_error": (
+            "🌐 Connection issue with the AI service. Check your internet, then try again in a moment."
+        ),
         "empty_retrieval": (
             "I don't have the exact context to answer that. Could you rephrase with other words, "
             "or be more specific about the concept that's blocking you?"
@@ -130,6 +138,14 @@ LOCALES = {
         "spinner_force_mode": "Je te réponds en mode {mode}...",
         "input_placeholder": "Pose ta question (concept que tu comprends pas, sens, devoir...)",
         "friendly_error": "Le tuteur réfléchit... Réessaie dans 5 secondes.",
+        "rate_limit_error": (
+            "⏳ Le tuteur est très demandé en ce moment — trop de questions arrivent en même temps. "
+            "Attends environ 30 secondes et réessaie. "
+            "(Limite free tier : ~30 questions/minute partagées entre tous les utilisateurs de l'app.)"
+        ),
+        "network_error": (
+            "🌐 Problème de connexion au service d'IA. Vérifie ton réseau et réessaie dans un instant."
+        ),
         "empty_retrieval": (
             "Je n'ai pas le contexte exact pour te répondre. Tu peux reformuler avec d'autres mots, "
             "ou être plus précis sur le concept qui te bloque ?"
@@ -154,6 +170,20 @@ def t(key: str, lang: str, **fmt) -> str:
 def mode_label(mode: str, lang: str) -> str:
     """Label localisé d'un mode."""
     return t({"CHEAT": "label_cheat", "UNDERSTAND": "label_understand", "MEANING": "label_meaning"}[mode], lang)
+
+
+def format_error_message(exc: Exception, lang: str) -> str:
+    """Map une exception Groq au message localisé approprié.
+
+    - RateLimitError (HTTP 429) : message dédié rate-limit avec contexte free-tier.
+    - APIConnectionError / APITimeoutError : message dédié réseau.
+    - Autre : friendly_error générique (fallback Q1).
+    """
+    if isinstance(exc, RateLimitError):
+        return t("rate_limit_error", lang)
+    if isinstance(exc, (APIConnectionError, APITimeoutError)):
+        return t("network_error", lang)
+    return t("friendly_error", lang)
 
 
 # === Pipeline ===
@@ -391,8 +421,8 @@ def main() -> None:
                         forced_mode=forced_mode,
                         history=history_for_rerun,
                     )
-                except Exception:
-                    response_text, mode_used = t("friendly_error", lang), forced_mode  # Q1
+                except Exception as exc:  # Q1 — classifie par type pour message ciblé
+                    response_text, mode_used = format_error_message(exc, lang), forced_mode
             st.markdown(response_text)
             st.caption(f"{MODE_TO_EMOJI[mode_used]} {t('mode_forced_caption', lang)} : {mode_label(mode_used, lang)}")
         st.session_state.messages.append(
@@ -417,8 +447,8 @@ def main() -> None:
                         lang,
                         history=history,
                     )
-                except Exception:  # Q1
-                    response_text = t("friendly_error", lang)
+                except Exception as exc:  # Q1 — classifie par type pour message ciblé
+                    response_text = format_error_message(exc, lang)
                     mode_used = "UNDERSTAND"
             st.markdown(response_text)
             st.caption(f"{MODE_TO_EMOJI[mode_used]} {t('mode_caption', lang)} : {mode_label(mode_used, lang)}")
