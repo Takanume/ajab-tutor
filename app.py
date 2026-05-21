@@ -68,6 +68,15 @@ LOCALES = {
         "app_caption": (
             "Ask me your question. I'll detect what you're looking for and reply in the matching style."
         ),
+        "welcome_hero": (
+            "> **You don't hate learning. You hate learning things that make no sense.**\n\n"
+            "This tutor helps you understand **why** a topic matters, **where** it shows up in real life, "
+            "and **how** to actually *get it* — instead of memorizing it for one exam and forgetting "
+            "it a week later.\n\n"
+            "Complex subjects are broken down simply, step by step, until they click. "
+            "You're not just studying to pass — you're building the kind of understanding "
+            "that can open doors later in **science, tech, business, medicine**, and beyond."
+        ),
         "sidebar_about": "About",
         "sidebar_modes_intro": "I adapt my answer to what you're trying to do:",
         "sidebar_mode_understand": "- 💡 **Understand** — when you want to understand a concept",
@@ -114,6 +123,15 @@ LOCALES = {
         "app_title": "📚 AJAB Tutor",
         "app_caption": (
             "Pose-moi ta question. Je détecte ce que tu cherches et je te réponds dans le style adapté."
+        ),
+        "welcome_hero": (
+            "> **Tu détestes pas apprendre. Tu détestes apprendre des trucs qui n'ont aucun sens.**\n\n"
+            "Ce tuteur t'aide à comprendre **pourquoi** un sujet compte, **où** il apparaît dans la vraie vie, "
+            "et **comment** vraiment le *piger* — au lieu de le bachoter pour un contrôle et tout oublier "
+            "une semaine après.\n\n"
+            "Les concepts complexes se décortiquent simplement, étape par étape, jusqu'au déclic. "
+            "Tu travailles pas juste pour passer — tu construis le genre de compréhension "
+            "qui peut t'ouvrir des portes plus tard en **sciences, tech, business, médecine**, et au-delà."
         ),
         "sidebar_about": "À propos",
         "sidebar_modes_intro": "J'adapte ma réponse à ce que tu essaies de faire :",
@@ -384,7 +402,6 @@ def main() -> None:
     st.set_page_config(page_title=t("page_title", lang), page_icon="📚", layout="centered")
 
     st.title(t("app_title", lang))
-    st.caption(t("app_caption", lang))
 
     new_lang = render_sidebar(lang)
     if new_lang != lang:
@@ -392,6 +409,13 @@ def main() -> None:
         st.session_state.lang = new_lang
         st.session_state.messages = []
         st.rerun()
+
+    # Welcome hero : affiché uniquement à l'ouverture (état vide), disparaît dès la première
+    # question. Sert de "landing pitch" qui ne pollue pas la conversation longue session.
+    if not st.session_state.messages and not st.session_state.pending_rerun:
+        st.markdown(t("welcome_hero", lang))
+    else:
+        st.caption(t("app_caption", lang))
 
     # Render history
     for i, msg in enumerate(st.session_state.messages):
