@@ -68,15 +68,36 @@ LOCALES = {
         "app_caption": (
             "Ask me your question. I'll detect what you're looking for and reply in the matching style."
         ),
-        "welcome_hero": (
-            "> **You don't hate learning. You hate learning things that :red[make no sense].**\n\n"
-            "ChatGPT gives you the answer. You'll forget it by Friday.\n\n"
-            ":orange[**I refuse to give you the answer**] — and that's exactly why you'll remember it.\n\n"
-            "Complex subjects, broken down step by step, until they click. "
-            "The kind of understanding that opens doors :violet[**next year**] in university interviews, "
-            ":violet[**in three years**] during your first internship — not just \"someday\".\n\n"
-            "**👇 Ask your first question below.** :gray[Even one you'd be embarrassed to ask in class.]"
-        ),
+        "welcome_hero": """
+<div style="padding: 24px 26px; background: linear-gradient(135deg, rgba(239, 68, 68, 0.10) 0%, rgba(249, 115, 22, 0.06) 100%); border-left: 6px solid #ef4444; border-radius: 14px; margin: 8px 0 22px 0;">
+  <h2 style="margin: 0; font-size: 1.75em; font-weight: 800; line-height: 1.25; letter-spacing: -0.01em;">
+    You don't hate learning.<br>
+    You hate learning things that <span style="color: #ef4444;">make no sense</span>.
+  </h2>
+</div>
+
+<p style="font-size: 1.08em; margin: 14px 0 8px 0; opacity: 0.78;">
+ChatGPT gives you the answer. <em>You'll forget it by Friday.</em>
+</p>
+
+<div style="margin: 10px 0 22px 0; padding: 14px 18px; background: rgba(249, 115, 22, 0.12); border-left: 5px solid #f97316; border-radius: 10px;">
+  <span style="font-size: 1.15em; font-weight: 700; color: #ea580c;">I refuse to give you the answer.</span>
+  <span style="font-size: 1.05em;"> And that's exactly why you'll remember it.</span>
+</div>
+
+<p style="font-size: 1.02em; margin: 16px 0; line-height: 1.55;">
+Complex subjects, broken down step by step, until they click. The kind of understanding that opens doors
+<span style="background: rgba(139, 92, 246, 0.18); padding: 3px 10px; border-radius: 8px; font-weight: 700; color: #7c3aed; white-space: nowrap;">next year</span>
+in university interviews,
+<span style="background: rgba(139, 92, 246, 0.18); padding: 3px 10px; border-radius: 8px; font-weight: 700; color: #7c3aed; white-space: nowrap;">in three years</span>
+during your first internship — not just "someday".
+</p>
+
+<div style="margin: 26px 0 14px 0; padding: 18px 22px; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; border-radius: 14px; text-align: center; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.28);">
+  <div style="font-size: 1.18em; font-weight: 700; margin-bottom: 4px;">👇 Ask your first question below.</div>
+  <div style="font-size: 0.95em; opacity: 0.93; font-weight: 400;">Even one you'd be embarrassed to ask in class.</div>
+</div>
+""",
         "sidebar_about": "How I work",
         "sidebar_modes_intro": "Three modes, picked automatically based on what you actually need:",
         "sidebar_mode_understand": "- 💡 **Understand** — you don't get a concept and want it to click",
@@ -121,15 +142,35 @@ LOCALES = {
         "app_caption": (
             "Pose-moi ta question. Je détecte ce que tu cherches et je te réponds dans le style adapté."
         ),
-        "welcome_hero": (
-            "> **Tu détestes pas apprendre. Tu détestes apprendre :red[pour rien].**\n\n"
-            "ChatGPT te donne la réponse. Tu l'oublies vendredi.\n\n"
-            "Moi :orange[**je refuse de te la donner**] — et c'est pour ça que tu vas vraiment retenir.\n\n"
-            "On décortique le sujet ensemble, étape par étape, jusqu'au déclic. "
-            "Pas pour le contrôle de demain — pour :violet[**l'oral du bac**], :violet[**Parcoursup**], "
-            ":violet[**ton premier stage**].\n\n"
-            "**👇 Tape ta première question en bas.** :gray[Même celle que tu n'oserais jamais poser en classe.]"
-        ),
+        "welcome_hero": """
+<div style="padding: 24px 26px; background: linear-gradient(135deg, rgba(239, 68, 68, 0.10) 0%, rgba(249, 115, 22, 0.06) 100%); border-left: 6px solid #ef4444; border-radius: 14px; margin: 8px 0 22px 0;">
+  <h2 style="margin: 0; font-size: 1.75em; font-weight: 800; line-height: 1.25; letter-spacing: -0.01em;">
+    Tu détestes pas apprendre.<br>
+    Tu détestes apprendre <span style="color: #ef4444;">pour rien</span>.
+  </h2>
+</div>
+
+<p style="font-size: 1.08em; margin: 14px 0 8px 0; opacity: 0.78;">
+ChatGPT te donne la réponse. <em>Tu l'oublies vendredi.</em>
+</p>
+
+<div style="margin: 10px 0 22px 0; padding: 14px 18px; background: rgba(249, 115, 22, 0.12); border-left: 5px solid #f97316; border-radius: 10px;">
+  <span style="font-size: 1.15em; font-weight: 700; color: #ea580c;">Moi je refuse de te la donner.</span>
+  <span style="font-size: 1.05em;"> Et c'est pour ça que tu vas vraiment retenir.</span>
+</div>
+
+<p style="font-size: 1.02em; margin: 16px 0; line-height: 1.55;">
+On décortique le sujet ensemble, étape par étape, jusqu'au déclic. Pas pour le contrôle de demain — pour
+<span style="background: rgba(139, 92, 246, 0.18); padding: 3px 10px; border-radius: 8px; font-weight: 700; color: #7c3aed; white-space: nowrap;">l'oral du bac</span>,
+<span style="background: rgba(139, 92, 246, 0.18); padding: 3px 10px; border-radius: 8px; font-weight: 700; color: #7c3aed; white-space: nowrap;">Parcoursup</span>,
+<span style="background: rgba(139, 92, 246, 0.18); padding: 3px 10px; border-radius: 8px; font-weight: 700; color: #7c3aed; white-space: nowrap;">ton premier stage</span>.
+</p>
+
+<div style="margin: 26px 0 14px 0; padding: 18px 22px; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; border-radius: 14px; text-align: center; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.28);">
+  <div style="font-size: 1.18em; font-weight: 700; margin-bottom: 4px;">👇 Tape ta première question en bas.</div>
+  <div style="font-size: 0.95em; opacity: 0.93; font-weight: 400;">Même celle que tu n'oserais jamais poser en classe.</div>
+</div>
+""",
         "sidebar_about": "Comment je marche",
         "sidebar_modes_intro": "Trois modes, choisis automatiquement selon ce que tu cherches vraiment :",
         "sidebar_mode_understand": "- 💡 **Comprendre** — tu piges pas un concept et tu veux que ça fasse déclic",
@@ -407,8 +448,9 @@ def main() -> None:
 
     # Welcome hero : affiché uniquement à l'ouverture (état vide), disparaît dès la première
     # question. Sert de "landing pitch" qui ne pollue pas la conversation longue session.
+    # unsafe_allow_html=True nécessaire pour le styling inline (gradients, pills, callout panels).
     if not st.session_state.messages and not st.session_state.pending_rerun:
-        st.markdown(t("welcome_hero", lang))
+        st.markdown(t("welcome_hero", lang), unsafe_allow_html=True)
     else:
         st.caption(t("app_caption", lang))
 
