@@ -58,6 +58,22 @@ MODE_TO_EMOJI = {"CHEAT": "🛑", "UNDERSTAND": "💡", "MEANING": "🌱"}
 # Multi-turn memory : nombre de tours user/assistant gardés en contexte.
 HISTORY_TURNS_KEPT = 5
 
+# Path absolu vers le SVG d'icône — fonctionne en local et sur Streamlit Cloud.
+ICON_PATH = Path(__file__).parent / "assets" / "impossible-cube.svg"
+
+# Version inline du SVG (currentColor pour s'adapter au thème), injectée dans le titre.
+# Marge droite pour spacing avec le texte "AJAB Tutor".
+ICON_INLINE_SVG = (
+    '<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 100 100" '
+    'fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" '
+    'stroke-linejoin="round" style="vertical-align: middle; margin-right: 14px;">'
+    '<path d="M 50 8 L 92 30 L 92 70 L 50 92 L 8 70 L 8 30 Z"/>'
+    '<line x1="50" y1="8" x2="50" y2="50"/>'
+    '<line x1="50" y1="50" x2="8" y2="70"/>'
+    '<line x1="50" y1="50" x2="92" y2="70"/>'
+    "</svg>"
+)
+
 # CSS injecté pour aligner le chat input sur l'identité visuelle de la hero (violet/rose).
 # Selectors multiples pour compat versions Streamlit. !important pour override les defaults.
 CUSTOM_CSS = """
@@ -97,7 +113,7 @@ CUSTOM_CSS = """
 LOCALES = {
     "en": {
         "page_title": "AJAB Tutor",
-        "app_title": "📚 AJAB Tutor",
+        "app_title": "AJAB Tutor",
         "app_caption": (
             "Ask me your question. I'll detect what you're looking for and reply in the matching style."
         ),
@@ -158,7 +174,7 @@ ChatGPT gives you the answer. You'll forget it by Friday.<br>
     },
     "fr": {
         "page_title": "AJAB Tutor",
-        "app_title": "📚 AJAB Tutor",
+        "app_title": "AJAB Tutor",
         "app_caption": (
             "Pose-moi ta question. Je détecte ce que tu cherches et je te réponds dans le style adapté."
         ),
@@ -440,7 +456,7 @@ def main() -> None:
 
     st.set_page_config(
         page_title=t("page_title", lang),
-        page_icon="📚",
+        page_icon=str(ICON_PATH) if ICON_PATH.exists() else "🧊",
         layout="centered",
         initial_sidebar_state="collapsed",
     )
@@ -448,7 +464,12 @@ def main() -> None:
     # Injecte le styling custom du chat input (cohérence avec la hero violet/rose).
     st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
-    st.title(t("app_title", lang))
+    # Titre avec icône impossible-cube inline (SVG, currentColor s'adapte au thème).
+    st.markdown(
+        f'<h1 style="margin: 0 0 0.4em 0; display: flex; align-items: center;">'
+        f'{ICON_INLINE_SVG}{t("app_title", lang)}</h1>',
+        unsafe_allow_html=True,
+    )
 
     new_lang = render_sidebar(lang)
     if new_lang != lang:
