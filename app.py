@@ -437,6 +437,9 @@ def main() -> None:
         initial_sidebar_state="collapsed",
     )
 
+    # Injecte le styling custom du chat input (cohérence avec la hero violet/rose).
+    st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
+
     st.title(t("app_title", lang))
 
     new_lang = render_sidebar(lang)
