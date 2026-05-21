@@ -77,19 +77,16 @@ LOCALES = {
             "**in three years** during your first internship — not just \"someday\".\n\n"
             "**👇 Ask your first question below. Even one you'd be embarrassed to ask in class.**"
         ),
-        "sidebar_about": "About",
-        "sidebar_modes_intro": "I adapt my answer to what you're trying to do:",
-        "sidebar_mode_understand": "- 💡 **Understand** — when you want to understand a concept",
-        "sidebar_mode_meaning": "- 🌱 **Meaning** — when you're looking for the why",
-        "sidebar_mode_cheat": "- 🛑 **No shortcut** — when you just want the answer",
+        "sidebar_about": "How I work",
+        "sidebar_modes_intro": "Three modes, picked automatically based on what you actually need:",
+        "sidebar_mode_understand": "- 💡 **Understand** — you don't get a concept and want it to click",
+        "sidebar_mode_meaning": "- 🌱 **Meaning** — you want to know why this matters in real life",
+        "sidebar_mode_cheat": "- 🛑 **No shortcut** — you want the answer; I refuse, and walk you through it instead",
         "sidebar_modes_outro": (
-            "I detect this automatically. To override, use the buttons under each answer."
+            "I read what you write to pick the mode. Wrong guess? Tap the buttons under any answer to switch."
         ),
         "sidebar_lang_label": "Language",
         "sidebar_lang_help": "Switch language. Resets the conversation.",
-        "sidebar_classifier_label": "Classifier",
-        "sidebar_generation_label": "Generation",
-        "sidebar_hosted": "Hosted on Groq (free tier).",
         "sidebar_reset_button": "🔄 New conversation",
         "label_understand": "UNDERSTAND",
         "label_meaning": "MEANING",
@@ -133,19 +130,16 @@ LOCALES = {
             "pour **ton premier stage**.\n\n"
             "**👇 Tape ta première question en bas. Même celle que tu n'oserais jamais poser en classe.**"
         ),
-        "sidebar_about": "À propos",
-        "sidebar_modes_intro": "J'adapte ma réponse à ce que tu essaies de faire :",
-        "sidebar_mode_understand": "- 💡 **Comprendre** — quand tu veux comprendre un concept",
-        "sidebar_mode_meaning": "- 🌱 **Sens** — quand tu cherches le pourquoi",
-        "sidebar_mode_cheat": "- 🛑 **Pas de raccourci** — quand tu veux juste la réponse",
+        "sidebar_about": "Comment je marche",
+        "sidebar_modes_intro": "Trois modes, choisis automatiquement selon ce que tu cherches vraiment :",
+        "sidebar_mode_understand": "- 💡 **Comprendre** — tu piges pas un concept et tu veux que ça fasse déclic",
+        "sidebar_mode_meaning": "- 🌱 **Sens** — tu veux savoir pourquoi ça compte dans la vraie vie",
+        "sidebar_mode_cheat": "- 🛑 **Pas de raccourci** — tu veux la réponse ; je refuse, et je te fais avancer toi-même",
         "sidebar_modes_outro": (
-            "Je détecte automatiquement. Pour forcer, utilise les boutons sous chaque réponse."
+            "Je lis ce que tu écris pour choisir le mode. Mauvaise pioche ? Clique les boutons sous n'importe quelle réponse pour switcher."
         ),
         "sidebar_lang_label": "Langue",
         "sidebar_lang_help": "Change la langue. Réinitialise la conversation.",
-        "sidebar_classifier_label": "Classifier",
-        "sidebar_generation_label": "Generation",
-        "sidebar_hosted": "Hébergé sur Groq (free tier).",
         "sidebar_reset_button": "🔄 Nouvelle conversation",
         "label_understand": "COMPRENDRE",
         "label_meaning": "SENS",
@@ -378,10 +372,6 @@ def render_sidebar(lang: str) -> str:
             + t("sidebar_modes_outro", new_lang)
         )
         st.divider()
-        st.caption(f"{t('sidebar_classifier_label', new_lang)} : `{CLASSIFIER_MODEL}`")
-        st.caption(f"{t('sidebar_generation_label', new_lang)} : `{GENERATION_MODEL}`")
-        st.caption(t("sidebar_hosted", new_lang))
-        st.divider()
         if st.button(t("sidebar_reset_button", new_lang)):
             st.session_state.messages = []
             st.rerun()
@@ -399,7 +389,12 @@ def main() -> None:
 
     lang = st.session_state.lang
 
-    st.set_page_config(page_title=t("page_title", lang), page_icon="📚", layout="centered")
+    st.set_page_config(
+        page_title=t("page_title", lang),
+        page_icon="📚",
+        layout="centered",
+        initial_sidebar_state="collapsed",
+    )
 
     st.title(t("app_title", lang))
 
