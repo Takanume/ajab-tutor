@@ -376,21 +376,6 @@ def build_history(messages: list[dict], turns_to_keep: int = HISTORY_TURNS_KEPT)
 # === UI ===
 
 
-def render_assistant_buttons(question: str, current_mode: str, msg_index: int, lang: str) -> str | None:
-    """3 boutons sous une réponse assistant pour rerun la question dans un autre mode."""
-    other_modes = [m for m in VALID_MODES if m != current_mode]
-    cols = st.columns(len(other_modes))
-    for col, mode in zip(cols, other_modes):
-        with col:
-            if st.button(
-                f"{MODE_TO_EMOJI[mode]} {mode_label(mode, lang)}",
-                key=f"force_{mode}_{msg_index}",
-                use_container_width=True,
-            ):
-                return mode
-    return None
-
-
 def render_sidebar(lang: str) -> str:
     """Affiche la sidebar et retourne la langue éventuellement modifiée."""
     with st.sidebar:
