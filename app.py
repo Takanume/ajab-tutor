@@ -69,13 +69,13 @@ LOCALES = {
             "Ask me your question. I'll detect what you're looking for and reply in the matching style."
         ),
         "welcome_hero": (
-            "> **You don't hate learning. You hate learning things that make no sense.**\n\n"
+            "> **You don't hate learning. You hate learning things that :red[make no sense].**\n\n"
             "ChatGPT gives you the answer. You'll forget it by Friday.\n\n"
-            "I refuse to give you the answer — and that's exactly why you'll remember it.\n\n"
+            ":orange[**I refuse to give you the answer**] — and that's exactly why you'll remember it.\n\n"
             "Complex subjects, broken down step by step, until they click. "
-            "The kind of understanding that opens doors **next year** in university interviews, "
-            "**in three years** during your first internship — not just \"someday\".\n\n"
-            "**👇 Ask your first question below. Even one you'd be embarrassed to ask in class.**"
+            "The kind of understanding that opens doors :violet[**next year**] in university interviews, "
+            ":violet[**in three years**] during your first internship — not just \"someday\".\n\n"
+            "**👇 Ask your first question below.** :gray[Even one you'd be embarrassed to ask in class.]"
         ),
         "sidebar_about": "How I work",
         "sidebar_modes_intro": "Three modes, picked automatically based on what you actually need:",
@@ -122,13 +122,13 @@ LOCALES = {
             "Pose-moi ta question. Je détecte ce que tu cherches et je te réponds dans le style adapté."
         ),
         "welcome_hero": (
-            "> **Tu détestes pas apprendre. Tu détestes apprendre pour rien.**\n\n"
+            "> **Tu détestes pas apprendre. Tu détestes apprendre :red[pour rien].**\n\n"
             "ChatGPT te donne la réponse. Tu l'oublies vendredi.\n\n"
-            "Moi je refuse de te la donner — et c'est pour ça que tu vas vraiment retenir.\n\n"
+            "Moi :orange[**je refuse de te la donner**] — et c'est pour ça que tu vas vraiment retenir.\n\n"
             "On décortique le sujet ensemble, étape par étape, jusqu'au déclic. "
-            "Pas pour le contrôle de demain — pour **l'oral du bac**, pour **Parcoursup**, "
-            "pour **ton premier stage**.\n\n"
-            "**👇 Tape ta première question en bas. Même celle que tu n'oserais jamais poser en classe.**"
+            "Pas pour le contrôle de demain — pour :violet[**l'oral du bac**], :violet[**Parcoursup**], "
+            ":violet[**ton premier stage**].\n\n"
+            "**👇 Tape ta première question en bas.** :gray[Même celle que tu n'oserais jamais poser en classe.]"
         ),
         "sidebar_about": "Comment je marche",
         "sidebar_modes_intro": "Trois modes, choisis automatiquement selon ce que tu cherches vraiment :",
